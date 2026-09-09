@@ -8,6 +8,7 @@ import { useBikeContext } from '@/context/BikeContext';
 
 const navLinks = [
   { name: 'Home', href: '/' },
+  { name: 'About', href: '/about' },
   { name: 'Used Bikes', href: '/used-bikes' },
   { name: 'Workshop', href: '/workshop' },
   { name: 'Sell Your Bike', href: '/sell-bike' },
@@ -40,9 +41,9 @@ export default function Navbar() {
           : 'bg-gradient-to-b from-black/60 to-transparent py-5 text-white'
       }`}
     >
-      <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-12 flex items-center justify-between">
+      <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
         {/* Logo */}
-        <Link href="/" className="flex items-center gap-2.5 group">
+        <Link href="/" className="flex items-center gap-2 group shrink-0">
           <div className="w-10 h-10 rounded-xl bg-red-600 flex items-center justify-center text-white shadow-md shadow-red-600/20 group-hover:scale-105 transition-transform">
             <Bike className="w-6 h-6 stroke-[2.5]" />
           </div>
@@ -61,14 +62,14 @@ export default function Navbar() {
         </Link>
 
         {/* Desktop Navigation Links */}
-        <div className="hidden lg:flex items-center gap-8">
+        <div className="hidden lg:flex items-center gap-6 xl:gap-7">
           {navLinks.map((link) => {
             const isActive = pathname === link.href;
             return (
               <Link
                 key={link.name}
                 href={link.href}
-                className={`font-sans text-sm font-semibold transition-colors duration-200 uppercase tracking-wider ${
+                className={`font-sans text-xs sm:text-sm font-semibold transition-colors duration-200 uppercase tracking-wide whitespace-nowrap ${
                   isActive
                     ? 'text-red-600'
                     : isScrolled || pathname !== '/'
@@ -83,11 +84,11 @@ export default function Navbar() {
         </div>
 
         {/* Quick Utility Icons & CTA */}
-        <div className="hidden lg:flex items-center gap-5">
+        <div className="hidden lg:flex items-center gap-3">
           {/* Wishlist Icon */}
           <Link
             href="/wishlist"
-            className={`relative p-2 rounded-full transition-colors ${
+            className={`relative p-1.5 rounded-full transition-colors ${
               isScrolled || pathname !== '/'
                 ? 'text-gray-700 hover:bg-gray-100'
                 : 'text-white hover:bg-white/10'
@@ -105,7 +106,7 @@ export default function Navbar() {
           {/* Compare Icon */}
           <Link
             href="/compare"
-            className={`relative p-2 rounded-full transition-colors ${
+            className={`relative p-1.5 rounded-full transition-colors ${
               isScrolled || pathname !== '/'
                 ? 'text-gray-700 hover:bg-gray-100'
                 : 'text-white hover:bg-white/10'
@@ -123,7 +124,7 @@ export default function Navbar() {
           {/* Contact Direct */}
           <a
             href="tel:+916238392582"
-            className={`flex items-center gap-2 px-3 py-2 text-xs font-semibold rounded-lg ${
+            className={`flex items-center gap-1.5 px-2.5 py-1.5 text-xs font-semibold rounded-lg shrink-0 ${
               isScrolled || pathname !== '/'
                 ? 'text-gray-700 hover:bg-gray-100'
                 : 'text-white hover:bg-white/10'
@@ -136,7 +137,7 @@ export default function Navbar() {
           {/* Book Test Ride Button */}
           <Link
             href="/used-bikes"
-            className="inline-flex items-center gap-2 px-5 py-2.5 bg-red-600 hover:bg-red-700 text-white font-sans text-xs font-bold uppercase tracking-wider rounded-xl transition-all shadow-md shadow-red-600/20 hover:-translate-y-0.5"
+            className="inline-flex items-center gap-1.5 px-4 py-2 bg-red-600 hover:bg-red-700 text-white font-sans text-xs font-bold uppercase tracking-wider rounded-xl transition-all shadow-md shadow-red-600/20 hover:-translate-y-0.5 shrink-0"
           >
             <Bike className="w-4 h-4" />
             Book Test Ride

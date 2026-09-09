@@ -17,6 +17,8 @@ export default function BikeCard({ bike, onBookTestRide }: BikeCardProps) {
   const isSaved = isInWishlist(bike.id);
   const isCompared = isInCompare(bike.id);
 
+  const [imgSrc, setImgSrc] = React.useState(bike.images[0]);
+
   // Approximate EMI calculation (assuming 20% down, 10% rate, 3 years)
   const principal = bike.price * 0.8;
   const emi = Math.round((principal * 0.032).toFixed(0) as any);
@@ -26,8 +28,9 @@ export default function BikeCard({ bike, onBookTestRide }: BikeCardProps) {
       {/* Top Image Section */}
       <div className="relative aspect-[4/3] bg-gray-100 overflow-hidden">
         <img
-          src={bike.images[0]}
+          src={imgSrc}
           alt={`${bike.brand} ${bike.model}`}
+          onError={() => setImgSrc('/images/hero_used_bikes.jpg')}
           className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
         />
 

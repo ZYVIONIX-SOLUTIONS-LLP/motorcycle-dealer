@@ -9,6 +9,7 @@ import TestRideModal from '../components/TestRideModal';
 import { mockBikes, Bike } from '@/data/bikes';
 import { useBikeContext } from '@/context/BikeContext';
 import { Filter, SlidersHorizontal, ArrowUpDown, X, Search, Bike as BikeIcon } from 'lucide-react';
+import PageHero from '../components/PageHero';
 import Link from 'next/link';
 
 function InventoryContent() {
@@ -127,8 +128,22 @@ function InventoryContent() {
   };
 
   return (
-    <div className="min-h-screen bg-gray-50 flex flex-col pt-24">
+    <div className="min-h-screen bg-gray-50 flex flex-col">
       <Navbar />
+
+      <PageHero
+        badge="Certified Pre-Owned Showroom"
+        title="Explore Verified Used"
+        highlightTitle="Motorcycles"
+        description="Browse South India's premier inventory of 150-point inspected pre-owned bikes with full service history and instant RC transfer."
+        imageSrc="/images/hero_used_bikes.jpg"
+        breadcrumbs={[{ name: 'Used Bikes', href: '/used-bikes' }]}
+        stats={[
+          { label: 'Certified Bikes', value: `${filteredBikes.length}+` },
+          { label: 'Inspection Points', value: '150' },
+          { label: 'Document Assurance', value: '100%' },
+        ]}
+      />
 
       <main className="flex-grow max-w-[1440px] mx-auto w-full px-4 sm:px-6 lg:px-12 py-8">
         {/* Header Title */}

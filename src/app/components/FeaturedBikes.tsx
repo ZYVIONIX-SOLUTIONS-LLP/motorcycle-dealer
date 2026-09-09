@@ -2,7 +2,7 @@
 
 import React, { useState } from 'react';
 import Link from 'next/link';
-import { ArrowRight, Sparkles } from 'lucide-react';
+import { ArrowRight, BadgeCheck } from 'lucide-react';
 import { mockBikes, Bike } from '@/data/bikes';
 import BikeCard from './BikeCard';
 import TestRideModal from './TestRideModal';
@@ -22,7 +22,7 @@ export default function FeaturedBikes() {
       <div className="flex flex-col md:flex-row md:items-end justify-between mb-10 gap-4">
         <div>
           <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-red-50 text-red-600 text-xs font-bold uppercase tracking-wider mb-2">
-            <Sparkles className="w-3.5 h-3.5" /> Handpicked Inventory
+            <BadgeCheck className="w-3.5 h-3.5" /> Handpicked Inventory
           </div>
           <h2 className="text-3xl md:text-4xl font-heading font-black text-gray-900 tracking-tight">
             Find Your <span className="text-red-600">Next Ride</span>

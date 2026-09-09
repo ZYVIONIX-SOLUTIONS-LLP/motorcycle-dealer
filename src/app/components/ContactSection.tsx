@@ -62,9 +62,9 @@ export default function ContactSection() {
                     Direct Contact
                   </h4>
                   <p className="font-sans text-sm text-text-secondary mt-2 leading-relaxed">
-                    Phone: +1 (800) 555-AURA <br />
-                    WhatsApp: +1 (800) 555-9000 <br />
-                    Email: concierge@auramotorsport.com
+                    Phone: +91 62383 92582 <br />
+                    WhatsApp: +91 62383 92582 <br />
+                    Email: support@ridehubmotorcycles.com
                   </p>
                 </div>
               </div>

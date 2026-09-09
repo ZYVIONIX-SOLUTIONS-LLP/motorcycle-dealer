@@ -9,7 +9,7 @@ import {
   FileCheck,
   Clock,
   Truck,
-  Sparkles,
+  Droplets,
   Award,
 } from 'lucide-react';
 
@@ -50,7 +50,7 @@ const features = [
     desc: 'Every mechanical adjustment, seal, and overhaul is fully guaranteed by our certified seal.',
   },
   {
-    icon: Sparkles,
+    icon: Droplets,
     title: 'Ceramic & Bike Spa',
     desc: 'Advanced aerospace surface seal protection and detailed aesthetic paint restoration.',
   },

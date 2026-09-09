@@ -40,7 +40,7 @@ export const mockBikes: Bike[] = [
     model: 'Classic 350',
     variant: 'Dark Stealth Black',
     year: 2022,
-    price: 165000,
+    price: 172000,
     kilometers: 14500,
     engineCC: 349,
     mileage: 35,
@@ -51,9 +51,8 @@ export const mockBikes: Bike[] = [
     condition: 'Mint',
     bikeType: 'Cruiser',
     images: [
-      'https://images.unsplash.com/photo-1558981403-c5f9899a28bc?auto=format&fit=crop&w=1200&q=80',
-      'https://images.unsplash.com/photo-1568772585407-9361f9bf3a87?auto=format&fit=crop&w=1200&q=80',
-      'https://images.unsplash.com/photo-1558981806-ec527fa84c39?auto=format&fit=crop&w=1200&q=80'
+      '/images/bikes/bike_re_classic350.jpg',
+      'https://images.unsplash.com/photo-1558981403-c5f9899a28bc?auto=format&fit=crop&w=1200&q=80'
     ],
     features: ['Dual Channel ABS', 'Tubeless Tyres', 'USB Charging', 'Tripper Navigation', 'Service Record Available'],
     inspectionScore: 96,
@@ -68,7 +67,7 @@ export const mockBikes: Bike[] = [
     model: 'R15 V4',
     variant: 'Racing Blue M',
     year: 2023,
-    price: 178000,
+    price: 154000,
     kilometers: 8900,
     engineCC: 155,
     mileage: 42,
@@ -79,8 +78,8 @@ export const mockBikes: Bike[] = [
     condition: 'Mint',
     bikeType: 'Sport',
     images: [
-      'https://images.unsplash.com/photo-1609630875171-b1321377ee65?auto=format&fit=crop&w=1200&q=80',
-      'https://images.unsplash.com/photo-1568772585407-9361f9bf3a87?auto=format&fit=crop&w=1200&q=80'
+      '/images/bikes/bike_yamaha_r15.jpg',
+      'https://images.unsplash.com/photo-1609630875171-b1321377ee65?auto=format&fit=crop&w=1200&q=80'
     ],
     features: ['Quickshifter', 'Traction Control', 'Upside Down Forks', 'Y-Connect Bluetooth', 'Single Owner'],
     inspectionScore: 98,
@@ -95,7 +94,7 @@ export const mockBikes: Bike[] = [
     model: 'Duke 250',
     variant: 'Dark Galvano',
     year: 2022,
-    price: 192000,
+    price: 185000,
     kilometers: 12300,
     engineCC: 248,
     mileage: 30,
@@ -106,8 +105,8 @@ export const mockBikes: Bike[] = [
     condition: 'Excellent',
     bikeType: 'Naked',
     images: [
-      'https://images.unsplash.com/photo-1568772585407-9361f9bf3a87?auto=format&fit=crop&w=1200&q=80',
-      'https://images.unsplash.com/photo-1558981403-c5f9899a28bc?auto=format&fit=crop&w=1200&q=80'
+      '/images/bikes/bike_ktm_duke250.jpg',
+      'https://images.unsplash.com/photo-1568772585407-9361f9bf3a87?auto=format&fit=crop&w=1200&q=80'
     ],
     features: ['Slipper Clutch', 'Supermoto ABS', 'LED Headlight', 'WP Apex Suspension'],
     inspectionScore: 94,
@@ -122,7 +121,7 @@ export const mockBikes: Bike[] = [
     model: 'CB350',
     variant: 'Hness DLX Pro Dual Tone',
     year: 2022,
-    price: 170000,
+    price: 162000,
     kilometers: 9600,
     engineCC: 348,
     mileage: 38,
@@ -133,8 +132,8 @@ export const mockBikes: Bike[] = [
     condition: 'Mint',
     bikeType: 'Cruiser',
     images: [
-      'https://images.unsplash.com/photo-1558981806-ec527fa84c39?auto=format&fit=crop&w=1200&q=80',
-      'https://images.unsplash.com/photo-1558981403-c5f9899a28bc?auto=format&fit=crop&w=1200&q=80'
+      '/images/bikes/bike_honda_cb350.jpg',
+      'https://images.unsplash.com/photo-1558981806-ec527fa84c39?auto=format&fit=crop&w=1200&q=80'
     ],
     features: ['HSTC Traction Control', 'Voice Control System', 'All-LED Lighting', 'Assist & Slipper Clutch'],
     inspectionScore: 97,
@@ -149,7 +148,7 @@ export const mockBikes: Bike[] = [
     model: 'Apache RTR 200 4V',
     variant: 'Dual Channel ABS with Ride Modes',
     year: 2023,
-    price: 132000,
+    price: 122000,
     kilometers: 7800,
     engineCC: 197,
     mileage: 40,
@@ -160,8 +159,8 @@ export const mockBikes: Bike[] = [
     condition: 'Mint',
     bikeType: 'Naked',
     images: [
-      'https://images.unsplash.com/photo-1609630875171-b1321377ee65?auto=format&fit=crop&w=1200&q=80',
-      'https://images.unsplash.com/photo-1568772585407-9361f9bf3a87?auto=format&fit=crop&w=1200&q=80'
+      '/images/bikes/bike_tvs_apache.jpg',
+      'https://images.unsplash.com/photo-1609630875171-b1321377ee65?auto=format&fit=crop&w=1200&q=80'
     ],
     features: ['3 Ride Modes (Rain/Urban/Sport)', 'Adjustable Front Suspension', 'SmartXonnect Bluetooth', 'Glide Through Tech'],
     inspectionScore: 95,
@@ -176,7 +175,7 @@ export const mockBikes: Bike[] = [
     model: 'Dominar 400',
     variant: 'Aurora Green Touring Edition',
     year: 2021,
-    price: 158000,
+    price: 142000,
     kilometers: 18200,
     engineCC: 373,
     mileage: 28,
@@ -187,7 +186,7 @@ export const mockBikes: Bike[] = [
     condition: 'Excellent',
     bikeType: 'Cruiser',
     images: [
-      'https://images.unsplash.com/photo-1558981403-c5f9899a28bc?auto=format&fit=crop&w=1200&q=80',
+      '/images/bikes/bike_bajaj_dominar.jpg',
       'https://images.unsplash.com/photo-1558981806-ec527fa84c39?auto=format&fit=crop&w=1200&q=80'
     ],
     features: ['Touring Visor & Engine Guard', 'Navigation Stay', 'USD Forks', 'Dual Channel ABS'],
@@ -203,7 +202,7 @@ export const mockBikes: Bike[] = [
     model: 'Hunter 350',
     variant: 'Rebel Blue',
     year: 2023,
-    price: 148000,
+    price: 138000,
     kilometers: 6400,
     engineCC: 349,
     mileage: 36,
@@ -214,8 +213,8 @@ export const mockBikes: Bike[] = [
     condition: 'Mint',
     bikeType: 'Commuter',
     images: [
-      'https://images.unsplash.com/photo-1568772585407-9361f9bf3a87?auto=format&fit=crop&w=1200&q=80',
-      'https://images.unsplash.com/photo-1558981403-c5f9899a28bc?auto=format&fit=crop&w=1200&q=80'
+      'https://images.unsplash.com/photo-1558981806-ec527fa84c39?auto=format&fit=crop&w=1200&q=80',
+      'https://images.unsplash.com/photo-1568772585407-9361f9bf3a87?auto=format&fit=crop&w=1200&q=80'
     ],
     features: ['Lightweight Chassis', 'Dual Channel ABS', 'Custom Exhaust Note', 'Low Seat Height'],
     inspectionScore: 98,
@@ -230,7 +229,7 @@ export const mockBikes: Bike[] = [
     model: 'MT-15 V2',
     variant: 'Cyan Storm',
     year: 2023,
-    price: 152000,
+    price: 139000,
     kilometers: 7100,
     engineCC: 155,
     mileage: 45,
@@ -241,8 +240,8 @@ export const mockBikes: Bike[] = [
     condition: 'Mint',
     bikeType: 'Naked',
     images: [
-      'https://images.unsplash.com/photo-1609630875171-b1321377ee65?auto=format&fit=crop&w=1200&q=80',
-      'https://images.unsplash.com/photo-1558981806-ec527fa84c39?auto=format&fit=crop&w=1200&q=80'
+      '/images/bikes/bike_yamaha_mt15.jpg',
+      'https://images.unsplash.com/photo-1609630875171-b1321377ee65?auto=format&fit=crop&w=1200&q=80'
     ],
     features: ['VVA Engine Tech', 'USD Front Suspension', 'Aluminum Swingarm', 'LED Projector'],
     inspectionScore: 97,
@@ -257,7 +256,7 @@ export const mockBikes: Bike[] = [
     model: 'Xpulse 200 4V',
     variant: 'Trail Blue',
     year: 2022,
-    price: 118000,
+    price: 105000,
     kilometers: 11200,
     engineCC: 199,
     mileage: 38,
@@ -268,8 +267,8 @@ export const mockBikes: Bike[] = [
     condition: 'Excellent',
     bikeType: 'Adventure',
     images: [
-      'https://images.unsplash.com/photo-1558981403-c5f9899a28bc?auto=format&fit=crop&w=1200&q=80',
-      'https://images.unsplash.com/photo-1568772585407-9361f9bf3a87?auto=format&fit=crop&w=1200&q=80'
+      '/images/bikes/bike_hero_xpulse.jpg',
+      'https://images.unsplash.com/photo-1558981403-c5f9899a28bc?auto=format&fit=crop&w=1200&q=80'
     ],
     features: ['Long Travel Suspension', 'Turn-by-Turn Navigation', 'Luggage Plate', 'Knuckle Guards'],
     inspectionScore: 93,
@@ -282,9 +281,9 @@ export const mockBikes: Bike[] = [
     id: 'suzuki-gixxer-250-2022',
     brand: 'Suzuki',
     model: 'Gixxer SF 250',
-    variant: 'Metallic Matte Black',
+    variant: 'Triton Orange Edition',
     year: 2022,
-    price: 145000,
+    price: 135000,
     kilometers: 13800,
     engineCC: 249,
     mileage: 35,
@@ -295,7 +294,7 @@ export const mockBikes: Bike[] = [
     condition: 'Excellent',
     bikeType: 'Sport',
     images: [
-      'https://images.unsplash.com/photo-1609630875171-b1321377ee65?auto=format&fit=crop&w=1200&q=80',
+      '/images/bikes/bike_suzuki_gixxer.jpg',
       'https://images.unsplash.com/photo-1558981806-ec527fa84c39?auto=format&fit=crop&w=1200&q=80'
     ],
     features: ['SOCS Oil Cooling System', 'Clip-on Handlebars', 'Dual Channel ABS', 'Full Digital Cluster'],
@@ -304,6 +303,33 @@ export const mockBikes: Bike[] = [
     registration: 'KA-51 (Electronic City)',
     availability: 'Available',
     featured: false
+  },
+  {
+    id: 'bajaj-pulsar-150-2023',
+    brand: 'Bajaj',
+    model: 'Pulsar 150',
+    variant: 'Twin Disc Carbon Black Edition',
+    year: 2023,
+    price: 88000,
+    kilometers: 4200,
+    engineCC: 149,
+    mileage: 48,
+    fuelType: 'Petrol',
+    transmission: 'Manual',
+    ownership: '1st Owner',
+    location: 'Kochi, KL',
+    condition: 'Mint',
+    bikeType: 'Commuter',
+    images: [
+      '/images/bikes/bike_bajaj_pulsar150.jpg',
+      'https://images.unsplash.com/photo-1558981403-c5f9899a28bc?auto=format&fit=crop&w=1200&q=80'
+    ],
+    features: ['Twin Disc Brakes', 'Single Channel ABS', 'Digital Speedometer', 'Nitrox Rear Suspension', 'Low KM'],
+    inspectionScore: 99,
+    insurance: 'Comprehensive valid till Nov 2027',
+    registration: 'KL-07 (Ernakulam)',
+    availability: 'Available',
+    featured: true
   }
 ];
 
@@ -356,7 +382,7 @@ export const mockWorkshopServices: WorkshopService[] = [
     description: 'Pressure foam wash, degreasing, rust protection, and multi-layer ceramic paint protection coating.',
     startingPrice: 799,
     estimatedTime: '2 Hours',
-    iconName: 'Sparkles',
+    iconName: 'ShieldCheck',
     popular: true
   }
 ];

@@ -13,7 +13,7 @@ import {
   Droplet,
   Shield,
   Battery,
-  Sparkles,
+  ShieldCheck,
   Paintbrush,
   Truck,
   FileCheck,
@@ -74,7 +74,7 @@ const services = [
     description: 'Ultra-lightweight lithium battery installations and electrical charging system output diagnostics.',
   },
   {
-    icon: Sparkles,
+    icon: ShieldCheck,
     title: 'Ceramic Coating',
     description: 'High-temp aerospace grade ceramic shield defending paintwork and exhaust headers from weathering.',
   },

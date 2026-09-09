@@ -23,8 +23,9 @@ import {
   Maximize2,
   FileText,
   Award,
-  Sparkles,
 } from 'lucide-react';
+
+import PageHero from '@/app/components/PageHero';
 
 export default function BikeDetailPage() {
   const params = useParams();
@@ -45,18 +46,27 @@ export default function BikeDetailPage() {
   const emi = Math.round((principal * 0.032).toFixed(0) as any);
 
   return (
-    <div className="min-h-screen bg-gray-50 flex flex-col pt-24">
+    <div className="min-h-screen bg-gray-50 flex flex-col">
       <Navbar />
 
-      <main className="flex-grow max-w-[1440px] mx-auto w-full px-4 sm:px-6 lg:px-12 py-8">
-        {/* Breadcrumb Navigation */}
-        <div className="flex items-center gap-2 text-xs text-gray-500 mb-6 font-medium">
-          <Link href="/" className="hover:text-red-600">Home</Link>
-          <span>/</span>
-          <Link href="/used-bikes" className="hover:text-red-600">Used Bikes</Link>
-          <span>/</span>
-          <span className="text-gray-900 font-bold">{bike.brand} {bike.model}</span>
-        </div>
+      <PageHero
+        badge={`${bike.brand} ${bike.variant}`}
+        title={`${bike.year} ${bike.brand}`}
+        highlightTitle={bike.model}
+        description={`Certified ${bike.condition} condition pre-owned motorcycle with ${bike.kilometers.toLocaleString('en-IN')} km driven, verified ${bike.ownership} ownership, and legal document assurance.`}
+        imageSrc={bike.images[0]}
+        breadcrumbs={[
+          { name: 'Used Bikes', href: '/used-bikes' },
+          { name: `${bike.brand} ${bike.model}`, href: `/used-bikes/${bike.id}` },
+        ]}
+        stats={[
+          { label: 'Health Score', value: `${bike.inspectionScore}/100` },
+          { label: 'Kilometers', value: `${bike.kilometers.toLocaleString('en-IN')}` },
+          { label: 'Ownership', value: bike.ownership },
+        ]}
+      />
+
+      <main className="flex-grow max-w-[1440px] mx-auto w-full px-4 sm:px-6 lg:px-12 py-10">
 
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10">
           {/* Left Column: Image Gallery */}
@@ -268,7 +278,7 @@ export default function BikeDetailPage() {
                 </button>
                 <div className="grid grid-cols-2 gap-3">
                   <a
-                    href={`https://wa.me/919876543210?text=Hi,%20I%20am%20interested%20in%20buying%20the%20${encodeURIComponent(bike.brand)}%20${encodeURIComponent(bike.model)}%20(₹${bike.price})`}
+                    href={`https://wa.me/916238392582?text=Hi,%20I%20am%20interested%20in%20buying%20the%20${encodeURIComponent(bike.brand)}%20${encodeURIComponent(bike.model)}%20(₹${bike.price})`}
                     target="_blank"
                     rel="noreferrer"
                     className="py-3 bg-emerald-600 hover:bg-emerald-700 text-white text-xs font-bold uppercase tracking-wider rounded-xl flex items-center justify-center gap-1.5 transition"
@@ -276,7 +286,7 @@ export default function BikeDetailPage() {
                     <MessageSquare className="w-4 h-4" /> WhatsApp
                   </a>
                   <a
-                    href="tel:+919876543210"
+                    href="tel:+916238392582"
                     className="py-3 bg-gray-900 hover:bg-black text-white text-xs font-bold uppercase tracking-wider rounded-xl flex items-center justify-center gap-1.5 transition"
                   >
                     <Phone className="w-4 h-4" /> Call Dealer

@@ -88,3 +88,21 @@ input:focus, select:focus, textarea:focus {
   border-color: #C8A96A;
   box-shadow: 0 0 0 2px rgba(200, 169, 106, 0.1);
 }
+
+/* Global Icon Hover Rotation */
+svg {
+  transition: transform 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
+  transform-origin: center;
+}
+
+svg:hover,
+a:hover svg,
+button:hover svg,
+.group:hover svg,
+[role="button"]:hover svg,
+label:hover svg,
+li:hover svg {
+  transform: rotate(360deg) scale(1.15);
+}
+
+

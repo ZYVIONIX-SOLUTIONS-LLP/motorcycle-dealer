@@ -9,15 +9,31 @@ import { useBikeContext } from '@/context/BikeContext';
 import { mockBikes } from '@/data/bikes';
 import { Heart, ArrowRight } from 'lucide-react';
 
+import PageHero from '../components/PageHero';
+
 export default function WishlistPage() {
   const { wishlist } = useBikeContext();
   const savedBikes = mockBikes.filter((b) => wishlist.includes(b.id));
 
   return (
-    <div className="min-h-screen bg-gray-50 flex flex-col pt-24">
+    <div className="min-h-screen bg-gray-50 flex flex-col">
       <Navbar />
 
-      <main className="flex-grow max-w-[1440px] mx-auto w-full px-4 sm:px-6 lg:px-12 py-8">
+      <PageHero
+        badge="Personal Saved Garage"
+        title="Your Saved"
+        highlightTitle="Motorcycles"
+        description="Keep track of your favorite pre-owned bikes, compare specs, and schedule test rides when you are ready."
+        imageSrc="/images/hero_used_bikes.jpg"
+        breadcrumbs={[{ name: 'Wishlist', href: '/wishlist' }]}
+        stats={[
+          { label: 'Saved Bikes', value: `${savedBikes.length}` },
+          { label: 'Inspection Guarantee', value: '150 Points' },
+          { label: 'Reserve Online', value: 'Instant' },
+        ]}
+      />
+
+      <main className="flex-grow max-w-[1440px] mx-auto w-full px-4 sm:px-6 lg:px-12 py-12">
         <div className="flex items-center justify-between mb-8 pb-4 border-b border-gray-200">
           <div>
             <div className="inline-flex items-center gap-1.5 px-3 py-1 bg-red-50 text-red-600 rounded-full text-xs font-bold uppercase tracking-wider mb-2">

@@ -5,6 +5,7 @@ import { useSearchParams } from 'next/navigation';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import WorkshopServices from '../components/WorkshopServices';
+import PageHero from '../components/PageHero';
 import { Wrench, Calendar, Clock, CheckCircle2, Bike } from 'lucide-react';
 
 function ServiceBookingForm() {
@@ -30,10 +31,24 @@ function ServiceBookingForm() {
   };
 
   return (
-    <div className="min-h-screen bg-gray-50 flex flex-col pt-24">
+    <div className="min-h-screen bg-gray-50 flex flex-col">
       <Navbar />
 
-      <main className="flex-grow max-w-[1440px] mx-auto w-full px-4 sm:px-6 lg:px-12 py-8">
+      <PageHero
+        badge="Online Workshop Reservation"
+        title="Schedule Your Bike"
+        highlightTitle="Service"
+        description="Book your preferred workshop slot with certified master mechanics, OEM genuine spares, and digital OBD engine diagnostics."
+        imageSrc="/images/hero_book_service.jpg"
+        breadcrumbs={[{ name: 'Book Service', href: '/book-service' }]}
+        stats={[
+          { label: 'Booking Time', value: 'Instant' },
+          { label: 'OEM Parts', value: '100% Genuine' },
+          { label: 'Express Delivery', value: 'Available' },
+        ]}
+      />
+
+      <main className="flex-grow max-w-[1440px] mx-auto w-full px-4 sm:px-6 lg:px-12 py-12">
         <div className="max-w-3xl mx-auto bg-white rounded-3xl p-6 sm:p-10 border border-gray-200 shadow-xl">
           {!submitted ? (
             <div>

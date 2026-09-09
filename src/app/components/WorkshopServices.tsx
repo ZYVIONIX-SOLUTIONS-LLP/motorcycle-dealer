@@ -2,7 +2,7 @@
 
 import React, { useState } from 'react';
 import Link from 'next/link';
-import { Wrench, Cpu, Droplet, Disc, Circle, Sparkles, Clock, ArrowRight, Shield } from 'lucide-react';
+import { Wrench, Cpu, Droplet, Disc, Circle, ShieldCheck, Clock, ArrowRight, Shield } from 'lucide-react';
 import { mockWorkshopServices, WorkshopService } from '@/data/bikes';
 
 const iconMap: Record<string, any> = {
@@ -11,7 +11,7 @@ const iconMap: Record<string, any> = {
   Droplet,
   Disc,
   Circle,
-  Sparkles,
+  ShieldCheck,
 };
 
 export default function WorkshopServices() {

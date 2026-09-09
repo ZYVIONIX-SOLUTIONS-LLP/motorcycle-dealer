@@ -2,7 +2,7 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
-import { ArrowRight, Wrench, ShieldCheck, Cpu, Sparkles } from 'lucide-react';
+import { ArrowRight, Wrench, ShieldCheck, Cpu, Droplets } from 'lucide-react';
 import Link from 'next/link';
 
 export default function ScrollHero() {
@@ -113,7 +113,7 @@ export default function ScrollHero() {
             </div>
           </div>
           <div className="flex items-center justify-center gap-3 text-left">
-            <Sparkles className="w-5 h-5 text-red-600 shrink-0" />
+            <Droplets className="w-5 h-5 text-red-600 shrink-0" />
             <div>
               <div className="text-sm font-bold text-white uppercase tracking-wider">Detailing</div>
               <div className="text-xs text-gray-400">Showroom Finish</div>

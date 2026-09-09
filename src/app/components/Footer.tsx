@@ -96,6 +96,7 @@ export default function Footer() {
       <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-12 pt-8 border-t border-gray-900 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-gray-500">
         <p>&copy; {new Date().getFullYear()} RideHub Pre-Owned Motorcycles & Workshop. All Rights Reserved.</p>
         <div className="flex gap-6">
+          <Link href="/about" className="hover:text-white transition">About Us</Link>
           <Link href="/privacy-policy" className="hover:text-white transition">Privacy Policy</Link>
           <Link href="/terms" className="hover:text-white transition">Terms of Service</Link>
           <Link href="/used-bikes" className="hover:text-white transition">Sitemap</Link>

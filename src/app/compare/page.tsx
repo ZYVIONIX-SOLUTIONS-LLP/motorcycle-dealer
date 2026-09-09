@@ -8,15 +8,31 @@ import { useBikeContext } from '@/context/BikeContext';
 import { mockBikes, Bike } from '@/data/bikes';
 import { Scale, X, Check, ArrowRight, ShieldCheck } from 'lucide-react';
 
+import PageHero from '../components/PageHero';
+
 export default function ComparePage() {
   const { compareList, toggleCompare, clearCompare } = useBikeContext();
   const comparedBikes = mockBikes.filter((b) => compareList.includes(b.id));
 
   return (
-    <div className="min-h-screen bg-gray-50 flex flex-col pt-24">
+    <div className="min-h-screen bg-gray-50 flex flex-col">
       <Navbar />
 
-      <main className="flex-grow max-w-[1440px] mx-auto w-full px-4 sm:px-6 lg:px-12 py-8">
+      <PageHero
+        badge="Side-by-Side Spec Analyzer"
+        title="Compare Pre-Owned"
+        highlightTitle="Motorcycles"
+        description="Analyze specs, pricing, mileage, ownership, and warranty details side-by-side to choose your perfect motorcycle."
+        imageSrc="/images/hero_used_bikes.jpg"
+        breadcrumbs={[{ name: 'Compare', href: '/compare' }]}
+        stats={[
+          { label: 'Comparison Limit', value: '3 Bikes' },
+          { label: 'Spec Verification', value: '100% Certified' },
+          { label: 'Price Guarantee', value: 'Best Market' },
+        ]}
+      />
+
+      <main className="flex-grow max-w-[1440px] mx-auto w-full px-4 sm:px-6 lg:px-12 py-12">
         <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-8 pb-4 border-b border-gray-200">
           <div>
             <div className="inline-flex items-center gap-1.5 px-3 py-1 bg-blue-50 text-blue-600 rounded-full text-xs font-bold uppercase tracking-wider mb-2">
