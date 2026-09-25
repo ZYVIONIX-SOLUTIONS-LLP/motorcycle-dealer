@@ -1,4 +1,5 @@
 import Navbar from './components/Navbar';
+import MobileSearchBar from './components/MobileSearchBar';
 import ScrollHero from './components/ScrollHero';
 import UsedBikeSearch from './components/UsedBikeSearch';
 import FeaturedBikes from './components/FeaturedBikes';
@@ -20,6 +21,9 @@ export default function Home() {
       <main className="flex-grow bg-white">
         {/* HERO SECTION IS LOCKED & UNTOUCHED */}
         <ScrollHero />
+
+        {/* FLIPKART-STYLE MOBILE SEARCH & CATEGORY PILLS */}
+        <MobileSearchBar />
 
         {/* REDESIGNED HOMEPAGE SECTIONS AFTER THE HERO */}
         <UsedBikeSearch />

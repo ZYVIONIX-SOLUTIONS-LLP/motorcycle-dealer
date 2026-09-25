@@ -51,21 +51,21 @@ export default function WhyChooseUs() {
         </p>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div className="grid grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-6">
         {reasons.map((item, idx) => {
           const Icon = item.icon;
           return (
             <div
               key={idx}
-              className="bg-gray-50/70 p-6 rounded-2xl border border-gray-100 hover:border-red-200 hover:shadow-lg transition-all group"
+              className="bg-gray-50/70 p-3.5 sm:p-6 rounded-xl sm:rounded-2xl border border-gray-100 hover:border-red-200 hover:shadow-lg transition-all group"
             >
-              <div className="w-12 h-12 rounded-xl bg-white text-red-600 border border-gray-200 flex items-center justify-center mb-4 group-hover:bg-red-600 group-hover:text-white transition-colors">
-                <Icon className="w-6 h-6" />
+              <div className="w-9 h-9 sm:w-12 sm:h-12 rounded-lg sm:rounded-xl bg-white text-red-600 border border-gray-200 flex items-center justify-center mb-2.5 sm:mb-4 group-hover:bg-red-600 group-hover:text-white transition-colors">
+                <Icon className="w-4 h-4 sm:w-6 sm:h-6" />
               </div>
-              <h3 className="text-lg font-heading font-black text-gray-900 mb-2">
+              <h3 className="text-xs sm:text-lg font-heading font-black text-gray-900 mb-1 sm:mb-2 line-clamp-1">
                 {item.title}
               </h3>
-              <p className="text-xs text-gray-500 leading-relaxed">
+              <p className="text-[10px] sm:text-xs text-gray-500 leading-relaxed line-clamp-3">
                 {item.description}
               </p>
             </div>

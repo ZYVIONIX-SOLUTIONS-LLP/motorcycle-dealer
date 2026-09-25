@@ -13,7 +13,7 @@ export default function WhatsAppButton() {
       initial={{ scale: 0, opacity: 0 }}
       animate={{ scale: 1, opacity: 1 }}
       transition={{ duration: 0.4, delay: 0.5 }}
-      className="fixed bottom-6 right-6 z-50 flex items-center group"
+      className="fixed bottom-20 right-4 md:bottom-6 md:right-6 z-40 flex items-center group"
     >
       {/* Tooltip on hover */}
       <span className="hidden sm:inline-block mr-3 px-3 py-1.5 bg-gray-900/90 backdrop-blur-md text-white text-xs font-semibold rounded-lg shadow-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none whitespace-nowrap border border-gray-800">

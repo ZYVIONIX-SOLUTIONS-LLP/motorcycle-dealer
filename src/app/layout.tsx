@@ -22,18 +22,24 @@ const dmSans = DM_Sans({
 });
 
 export const metadata: Metadata = {
-  title: "AURA Motorsport | Precision Motorcycle Engineering & Workshop",
-  description: "Bespoke motorcycle servicing, advanced diagnostics, performance tuning, detailing, and restoration. Certified master technicians for BMW Motorrad, Ducati, Triumph, and elite superbikes.",
-  keywords: ["luxury motorcycle repair", "superbike workshop", "Ducati service", "BMW Motorrad tuning", "Triumph motorcycle service", "motorcycle detailing", "ceramic coating", "ECU diagnostics"],
+  title: "RideHub | Precision Motorcycle Engineering & Pre-Owned Showroom",
+  description: "Bespoke motorcycle servicing, advanced diagnostics, performance tuning, and verified used superbikes.",
+  manifest: "/manifest.json",
+  appleWebApp: {
+    capable: true,
+    statusBarStyle: "default",
+    title: "RideHub",
+  },
   openGraph: {
-    title: "AURA Motorsport | Precision Motorcycle Engineering",
-    description: "Ultra-premium motorcycle servicing, diagnostics, performance tuning, detailing, and repairs for riders who demand perfection.",
+    title: "RideHub Motorsport & Workshop",
+    description: "Ultra-premium motorcycle servicing, diagnostics, performance tuning, and certified pre-owned bikes.",
     type: "website",
     locale: "en_US",
   },
 };
 
 import WhatsAppButton from "@/app/components/WhatsAppButton";
+import MobileBottomNav from "@/app/components/MobileBottomNav";
 
 export default function RootLayout({
   children,
@@ -45,10 +51,11 @@ export default function RootLayout({
       lang="en"
       className={`${inter.variable} ${manrope.variable} ${dmSans.variable} h-full antialiased scroll-smooth`}
     >
-      <body className="min-h-full flex flex-col bg-white text-text-primary">
+      <body className="min-h-full flex flex-col bg-white text-text-primary pb-16 md:pb-0">
         <BikeProvider>
           {children}
           <WhatsAppButton />
+          <MobileBottomNav />
         </BikeProvider>
       </body>
     </html>

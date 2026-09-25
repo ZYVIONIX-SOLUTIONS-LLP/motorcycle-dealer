@@ -40,43 +40,43 @@ export default function WorkshopServices() {
         </Link>
       </div>
 
-      {/* Service Cards Grid */}
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      {/* Service Cards Grid - 2 columns per row on mobile */}
+      <div className="grid grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-6">
         {mockWorkshopServices.map((service) => {
           const IconComponent = iconMap[service.iconName] || Wrench;
           return (
             <div
               key={service.id}
-              className="relative bg-white rounded-2xl p-6 border border-gray-100 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between group"
+              className="relative bg-white rounded-xl sm:rounded-2xl p-3.5 sm:p-6 border border-gray-100 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between group"
             >
               {service.popular && (
-                <span className="absolute top-4 right-4 bg-red-50 text-red-600 text-[10px] font-bold uppercase tracking-widest px-2.5 py-1 rounded-full border border-red-100">
-                  Most Popular
+                <span className="absolute top-2 right-2 sm:top-4 sm:right-4 bg-red-50 text-red-600 text-[8px] sm:text-[10px] font-bold uppercase tracking-widest px-1.5 sm:px-2.5 py-0.5 sm:py-1 rounded-full border border-red-100">
+                  Popular
                 </span>
               )}
 
               <div>
-                <div className="w-12 h-12 rounded-xl bg-gray-50 text-red-600 flex items-center justify-center mb-5 group-hover:bg-red-600 group-hover:text-white transition-colors duration-300">
-                  <IconComponent className="w-6 h-6" />
+                <div className="w-9 h-9 sm:w-12 sm:h-12 rounded-lg sm:rounded-xl bg-gray-50 text-red-600 flex items-center justify-center mb-3 sm:mb-5 group-hover:bg-red-600 group-hover:text-white transition-colors duration-300">
+                  <IconComponent className="w-4 h-4 sm:w-6 sm:h-6" />
                 </div>
 
-                <h3 className="text-xl font-heading font-black text-gray-900 mb-2">
+                <h3 className="text-xs sm:text-xl font-heading font-black text-gray-900 mb-1 sm:mb-2 line-clamp-1">
                   {service.title}
                 </h3>
-                <p className="text-xs text-gray-500 leading-relaxed mb-6">
+                <p className="text-[10px] sm:text-xs text-gray-500 leading-relaxed mb-3 sm:mb-6 line-clamp-2">
                   {service.description}
                 </p>
               </div>
 
               <div>
-                <div className="flex items-center justify-between py-3 border-t border-gray-100 text-xs mb-4">
-                  <div className="flex items-center gap-1.5 text-gray-500">
-                    <Clock className="w-3.5 h-3.5 text-gray-400" />
+                <div className="flex flex-col sm:flex-row sm:items-center justify-between py-2 sm:py-3 border-t border-gray-100 text-[10px] sm:text-xs mb-2.5 sm:mb-4 gap-1">
+                  <div className="flex items-center gap-1 text-gray-500">
+                    <Clock className="w-3 h-3 sm:w-3.5 sm:h-3.5 text-gray-400" />
                     <span>{service.estimatedTime}</span>
                   </div>
                   <div>
-                    <span className="text-gray-400 font-medium">Starts at </span>
-                    <span className="font-bold text-gray-900 text-base font-heading">
+                    <span className="text-gray-400 font-medium hidden sm:inline">Starts at </span>
+                    <span className="font-bold text-gray-900 text-xs sm:text-base font-heading">
                       ₹{service.startingPrice}
                     </span>
                   </div>
@@ -84,7 +84,7 @@ export default function WorkshopServices() {
 
                 <Link
                   href={`/book-service?service=${service.id}`}
-                  className="w-full py-2.5 bg-gray-900 hover:bg-black text-white text-xs font-bold uppercase tracking-wider rounded-xl flex items-center justify-center gap-2 transition"
+                  className="w-full py-1.5 sm:py-2.5 bg-gray-900 hover:bg-black active:bg-gray-800 text-white text-[10px] sm:text-xs font-bold uppercase tracking-wider rounded-lg sm:rounded-xl flex items-center justify-center gap-1 transition text-center"
                 >
                   Book Service
                 </Link>
