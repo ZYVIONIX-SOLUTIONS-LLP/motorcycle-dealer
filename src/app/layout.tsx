@@ -22,17 +22,12 @@ const dmSans = DM_Sans({
 });
 
 export const metadata: Metadata = {
-  title: "RideHub | Precision Motorcycle Engineering & Pre-Owned Showroom",
-  description: "Bespoke motorcycle servicing, advanced diagnostics, performance tuning, and verified used superbikes.",
-  manifest: "/manifest.json",
-  appleWebApp: {
-    capable: true,
-    statusBarStyle: "default",
-    title: "RideHub",
-  },
+  title: "AURA Motorsport | Precision Motorcycle Engineering & Workshop",
+  description: "Bespoke motorcycle servicing, advanced diagnostics, performance tuning, detailing, and restoration. Certified master technicians for BMW Motorrad, Ducati, Triumph, and elite superbikes.",
+  keywords: ["luxury motorcycle repair", "superbike workshop", "Ducati service", "BMW Motorrad tuning", "Triumph motorcycle service", "motorcycle detailing", "ceramic coating", "ECU diagnostics"],
   openGraph: {
-    title: "RideHub Motorsport & Workshop",
-    description: "Ultra-premium motorcycle servicing, diagnostics, performance tuning, and certified pre-owned bikes.",
+    title: "AURA Motorsport | Precision Motorcycle Engineering",
+    description: "Ultra-premium motorcycle servicing, diagnostics, performance tuning, detailing, and repairs for riders who demand perfection.",
     type: "website",
     locale: "en_US",
   },
