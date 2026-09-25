@@ -33,6 +33,18 @@ export default function Navbar() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  // Lock body scroll when mobile menu is open
+  React.useEffect(() => {
+    if (isMobileMenuOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = '';
+    }
+    return () => {
+      document.body.style.overflow = '';
+    };
+  }, [isMobileMenuOpen]);
+
   return (
     <nav
       className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${
@@ -174,33 +186,41 @@ export default function Navbar() {
 
       {/* Mobile Drawer */}
       {isMobileMenuOpen && (
-        <div className="fixed inset-0 top-0 bg-white z-50 flex flex-col justify-between p-6 pt-20 lg:hidden border-t border-gray-100 shadow-2xl overflow-y-auto animate-in slide-in-from-right duration-300">
+        <div className="fixed inset-0 z-[100] bg-white flex flex-col justify-between p-6 pt-6 lg:hidden shadow-2xl overflow-y-auto">
           <div className="flex flex-col gap-3">
             <div className="flex items-center justify-between pb-4 border-b border-gray-100">
-              <span className="text-xs font-bold text-gray-400 uppercase tracking-widest">
-                Navigation Menu
-              </span>
+              <div className="flex items-center gap-2">
+                <div className="w-8 h-8 rounded-lg bg-red-600 flex items-center justify-center text-white shadow-md shadow-red-600/20">
+                  <Bike className="w-5 h-5 stroke-[2.5]" />
+                </div>
+                <span className="font-heading font-black text-lg tracking-tight text-gray-900">
+                  RIDE<span className="text-red-600">HUB</span>
+                </span>
+              </div>
               <button
                 onClick={() => setIsMobileMenuOpen(false)}
-                className="p-2 text-gray-600 hover:text-gray-900 bg-gray-100 rounded-full"
+                className="p-2.5 text-gray-600 hover:text-gray-900 bg-gray-100 hover:bg-gray-200 rounded-full transition-colors"
+                aria-label="Close menu"
               >
                 <X className="w-5 h-5" />
               </button>
             </div>
 
-            {navLinks.map((link) => (
-              <Link
-                key={link.name}
-                href={link.href}
-                onClick={() => setIsMobileMenuOpen(false)}
-                className={`font-heading text-lg font-bold py-2.5 border-b border-gray-100 flex items-center justify-between ${
-                  pathname === link.href ? 'text-red-600' : 'text-gray-800'
-                }`}
-              >
-                <span>{link.name}</span>
-                {pathname === link.href && <span className="w-2 h-2 rounded-full bg-red-600" />}
-              </Link>
-            ))}
+            <div className="pt-2 flex flex-col">
+              {navLinks.map((link) => (
+                <Link
+                  key={link.name}
+                  href={link.href}
+                  onClick={() => setIsMobileMenuOpen(false)}
+                  className={`font-heading text-lg font-bold py-3.5 border-b border-gray-100 flex items-center justify-between transition-colors ${
+                    pathname === link.href ? 'text-red-600' : 'text-gray-800 hover:text-red-600'
+                  }`}
+                >
+                  <span>{link.name}</span>
+                  {pathname === link.href && <span className="w-2 h-2 rounded-full bg-red-600" />}
+                </Link>
+              ))}
+            </div>
 
             <div className="grid grid-cols-2 gap-3 pt-4">
               <Link
@@ -226,7 +246,7 @@ export default function Navbar() {
             <Link
               href="/used-bikes"
               onClick={() => setIsMobileMenuOpen(false)}
-              className="w-full flex items-center justify-center gap-2 py-3.5 bg-red-600 text-white font-bold text-sm uppercase tracking-wider rounded-xl shadow-lg shadow-red-600/20 active:scale-[0.98] transition"
+              className="w-full flex items-center justify-center gap-2 py-3.5 bg-red-600 hover:bg-red-700 text-white font-bold text-sm uppercase tracking-wider rounded-xl shadow-lg shadow-red-600/20 active:scale-[0.98] transition"
             >
               Browse Inventory
             </Link>
@@ -234,7 +254,7 @@ export default function Navbar() {
               href="https://wa.me/916238392582"
               target="_blank"
               rel="noreferrer"
-              className="w-full flex items-center justify-center gap-2 py-3 bg-emerald-600 text-white font-bold text-xs uppercase tracking-wider rounded-xl active:scale-[0.98] transition"
+              className="w-full flex items-center justify-center gap-2 py-3 bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-xs uppercase tracking-wider rounded-xl active:scale-[0.98] transition"
             >
               <MessageSquare className="w-4 h-4" />
               Chat on WhatsApp
