@@ -8,6 +8,8 @@ import Footer from '../../components/Footer';
 import TestRideModal from '../../components/TestRideModal';
 import { mockBikes, Bike } from '@/data/bikes';
 import { useBikeContext } from '@/context/BikeContext';
+
+
 import {
   ShieldCheck,
   Calendar,
